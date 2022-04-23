@@ -1,0 +1,43 @@
+package com.udacity.shoestore.instruction
+
+import androidx.lifecycle.ViewModelProvider
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
+import com.udacity.shoestore.R
+import com.udacity.shoestore.databinding.InstructionsFragmentBinding
+import com.udacity.shoestore.databinding.LoginFragmentBinding
+
+class Instructions : Fragment() {
+
+    companion object {
+        fun newInstance() = Instructions()
+    }
+
+    private lateinit var viewModel: InstructionsViewModel
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val binding: InstructionsFragmentBinding = DataBindingUtil.inflate(
+            inflater, R.layout.instructions_fragment, container, false )
+
+        binding.goToShoeList.setOnClickListener {
+                v: View -> v.findNavController().navigate(R.id.action_instructions_to_shoeList)
+        }
+
+        return binding.root
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel = ViewModelProvider(this).get(InstructionsViewModel::class.java)
+        // TODO: Use the ViewModel
+    }
+
+}
