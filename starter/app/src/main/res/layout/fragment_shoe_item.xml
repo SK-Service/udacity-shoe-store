@@ -7,24 +7,28 @@
             name="shoeData"
             type="com.udacity.shoestore.models.Shoe" />
     </data>
-<!--    Using MaterialCard View for each of the shoe-item.-->
+<!--    Using MaterialCard View for each of the shoe-item.
+        It will provide customizable card view-->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/shoeItemCardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:foreground="?android:attr/selectableItemBackground"
+        android:foreground="?android:attr/colorForeground"
         app:cardBackgroundColor="#EEE3EE"
         app:cardCornerRadius="8dp"
         app:cardElevation="8dp"
         app:contentPadding="12dp">
 
-<!--         For each of the shoe-item information piece using a linear layout for better alignment-->
+<!--         For each of the shoe-item information piece using a linear layout for better alignment
+        This LinearLayout ViewGroup is to group all the child LinearLayouts and align them as a
+        single unit-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:orientation="vertical">
+            <!--this is to group the first text label and content-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -42,6 +46,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/shoe_name_hint" />
             </LinearLayout>
+            <!--this is to group the second text label and content-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -59,6 +64,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/company_name_hint" />
             </LinearLayout>
+            <!--this is to group the third text label and content-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -76,6 +82,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/shoe_size_hint" />
             </LinearLayout>
+            <!--this is to group the fourth text label and content-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

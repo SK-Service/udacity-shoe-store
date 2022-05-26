@@ -18,7 +18,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    <!--Constraint layout creates a flat hierarchy of elements it contains. It will help to avoid
+     nesting, yet will help to constraint the relationships with the various elements-->
     <TextView
         android:id="@+id/message"
         style="@style/TextStyle"
