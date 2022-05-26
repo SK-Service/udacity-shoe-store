@@ -9,7 +9,8 @@
             name="loginViewModel"
             type="com.udacity.shoestore.login.LoginViewModel" />
     </data>
-
+    <!--Constraint layout creates a flat hierarchy of elements it contains. It will help to avoid
+     nesting, yet will help to constraint the relationships with the various elements-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_layout_parent"
         android:layout_width="match_parent"
@@ -19,7 +20,10 @@
             android:id="@+id/scrollView2"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
+            <!-- Adding a LinearLayout to create a view group which will align all child elements
+                This ViewGroup will be used to add Shoe item as child elements and these
+                Shoe items wills remain aligned
+            -->
             <LinearLayout
                 android:id="@+id/shoe_list"
                 android:layout_width="match_parent"
@@ -47,6 +51,7 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:src="@drawable/ic_add"
+            android:layout_gravity="end|bottom"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

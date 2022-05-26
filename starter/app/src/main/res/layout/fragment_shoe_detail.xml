@@ -12,6 +12,8 @@
             type="com.udacity.shoestore.shoelist.ShoeListViewModel" />
         <import type="com.udacity.shoestore.util.DataBindingConverter"/>
     </data>
+    <!--Constraint layout creates a flat hierarchy of elements it contains. It will help to avoid
+     nesting, yet will help to constraint the relationships with the various elements-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
