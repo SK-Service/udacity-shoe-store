@@ -7,27 +7,24 @@
             name="shoeData"
             type="com.udacity.shoestore.models.Shoe" />
     </data>
-<!--    Using MaterialCard View for each of the shoe-item
-        Material card view provides the customization required for this.-->
+<!--    Using MaterialCard View for each of the shoe-item.-->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/shoeItemCardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:foreground="?android:attr/panelColorBackground"
+        android:foreground="?android:attr/selectableItemBackground"
         app:cardBackgroundColor="#EEE3EE"
         app:cardCornerRadius="8dp"
         app:cardElevation="8dp"
         app:contentPadding="12dp">
 
-<!-- Linear Layout being a ViewGroup, will help all child elements to align better
-        This is a parent LinearLayout that will hold all other LinearLayout-->
+<!--         For each of the shoe-item information piece using a linear layout for better alignment-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:orientation="vertical">
-            <!-- This is the LinearLayout grouping the first pair of text label and content -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -45,7 +42,6 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/shoe_name_hint" />
             </LinearLayout>
-            <!-- This is the LinearLayout grouping the second pair of text label and content -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -63,7 +59,6 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/company_name_hint" />
             </LinearLayout>
-            <!-- This is the LinearLayout grouping the third pair of text label and content -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -81,7 +76,6 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/shoe_size_hint" />
             </LinearLayout>
-            <!-- This is the LinearLayout grouping the fourth pair of text label and content -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
